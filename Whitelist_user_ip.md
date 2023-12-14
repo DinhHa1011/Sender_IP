@@ -44,6 +44,7 @@ vim /etc/postfix/master.cf
 ```
 - Trong file master thêm dòng
 ```
+-o syslog_name=postfix/submission
 -o smtpd_client_restrictions=$mua_client_restrictions
 ```
 - Sau khi áp dụng config:
@@ -60,7 +61,7 @@ postmap /etc/postfix/ip_checks2
 systemctl restart postfix
 ```
 ## Test
-### ndt@hadt.space
+### Với user ndt@hadt.space
 - Với IP `123.30.170.251`
 ![image](https://github.com/DinhHa1011/Sender_IP/assets/119484840/d0ed4daf-222c-495c-8b3c-15847e2e9732)
 - Với IP khác
